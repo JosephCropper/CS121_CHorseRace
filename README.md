@@ -1,1 +1,3 @@
-# CS121_CHorseRace
+# CS121_C++HorseRace
+
+c++ horse race :)
