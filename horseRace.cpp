@@ -38,7 +38,7 @@ class Horse{
 int main() {
     srand(time(0));
     Horse horse[5];
-    bool raceContinue = true, waitForInput = true;
+    bool raceContinue = true;
     
     for (int u = 0; u < 5; u++){
         horse[u].name = u;
