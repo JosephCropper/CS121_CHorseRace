@@ -32,7 +32,7 @@ int main() {
         cin.ignore();
         for (int u = 0; u < 5; u++){
             if (rand()%2 == 1){
-                horsePos[u]++;
+                horsePos[u]++; //Why would this need to be a function
                 raceContinue = checkWin(u, horsePos[u], raceContinue);
             }//ifHorseMove
             printTrack(u, horsePos[u]);
