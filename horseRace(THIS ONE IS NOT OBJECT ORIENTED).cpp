@@ -3,7 +3,7 @@
 #include <ctime>
 using namespace std;
 
-void printTrack(int horseName, int horsePosition){
+inline void printTrack(int horseName, int horsePosition){
     cout << "\n";
     for (int u = 0; u < horsePosition; u++){
         cout << ".";
@@ -12,6 +12,14 @@ void printTrack(int horseName, int horsePosition){
     for (int u = horsePosition; u < 14; u++){
         cout << ".";
     }
+}
+
+inline bool checkWin(int horseName, int horsePosition, bool raceStats){
+    if (horsePosition == 15){
+        cout << "\n"; cout << horseName; cout << " has won!";
+        return false;
+    }
+    return raceStats;
 }
 
 int main() {
@@ -25,18 +33,10 @@ int main() {
         for (int u = 0; u < 5; u++){
             if (rand()%2 == 1){
                 horsePos[u]++;
-                printTrack(u, horsePos[u]);
-                if (horsePos[u] == 15){
-                    cout << "\n";
-                    cout << u;
-                    cout << " has won!";
-                    raceContinue = false;
-                }
-            }
-            else{
-                printTrack(u, horsePos[u]);
-            }
-        }
-    }
+                raceContinue = checkWin(u, horsePos[u], raceContinue);
+            }//ifHorseMove
+            printTrack(u, horsePos[u]);
+        }//For(u {0-4})
+    }//while(raceContinue)
     return 0;
-}
+}//Main
