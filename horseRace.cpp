@@ -12,10 +12,7 @@ class Horse{
             if (flip == 1){
                 pos++;
                 if (pos == 15){
-                    printLane();
-                    cout << "\n";
-                    cout << name;
-                    cout << " has won!";
+                    cout << "\n"; cout << name; cout << " has won!";
                     return true;
                 }
             }
