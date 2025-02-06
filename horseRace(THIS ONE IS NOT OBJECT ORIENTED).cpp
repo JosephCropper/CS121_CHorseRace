@@ -12,7 +12,7 @@ inline void printTrack(int horseName, int horsePosition){
     for (int u = horsePosition; u < 14; u++){
         cout << ".";
     }
-}
+}// this is more effective speed-wise (i am aware it is in miniscule amounts of time that do not matter.) than using an if statement in a for loop.
 
 inline bool checkWin(int horseName, int horsePosition, bool raceStats){
     if (horsePosition == 15){
