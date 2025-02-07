@@ -6,7 +6,7 @@ namespace One{
  class Horse{
   public:
     int name;
-    int horsePos = 0;
+    int horsePos;
 
     bool move(int flip);
     void printLane();

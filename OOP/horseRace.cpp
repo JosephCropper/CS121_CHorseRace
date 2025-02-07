@@ -1,36 +1,11 @@
+#include "Horse.cpp"
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+
+using namespace One;
 using namespace std;
 
-class Horse{
-    public:
-        int name;
-        int pos = 0;
-
-        bool move(int flip){
-            if (flip == 1){
-                pos++;
-                if (pos == 15){
-                    cout << "\n"; cout << name; cout << " has won!";
-                    return true;
-                }
-            }
-            printLane();
-            return false;
-        }
-        
-        void printLane(){
-            cout << "\n";
-            for (int u = 0; u < pos; u++){
-                cout << ".";
-            }
-            cout << name;
-            for (int u = pos; u < 14; u++){
-                cout << ".";
-            }
-        }
-};
 
 int main() {
     srand(time(0));
