@@ -1,0 +1,6 @@
+CC = g++
+CFLAGS = -g -Wall
+main: horseRace.o Horse.o
+  $(CC) $(CFLAGS) -o main horseRace.o Horse.o
+
+horseRace.o: horseRace.cpp 
