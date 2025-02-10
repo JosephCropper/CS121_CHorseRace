@@ -1,6 +1,25 @@
 CC = g++
-CFLAGS = -g -Wall
-main: horseRace.o Horse.o
-  $(CC) $(CFLAGS) -o main horseRace.o Horse.o
 
-horseRace.o: horseRace.cpp 
+CFLAGS = -g -Wall
+
+TARGET = horseRace
+
+TARGET_DEL = horseRace.exe
+
+SRCS = horseRace.cpp Horse.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+all: $(TARGET) run
+
+$(TARGET): $(OBJS)
+  $(CC) $(CFLAGS) -o $(TARGETS) $(OBJS)
+
+%.o: %.cpp
+  $(CC) $(CFLAGS) -c $< -o $@
+
+run $(TARGET)
+  $(TARGET)
+
+clean:
+  del $(TARGET_DEL) %(OBJS)
