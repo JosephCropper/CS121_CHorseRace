@@ -2,6 +2,6 @@
 #include <iostream>
 
 int main(){
-  horseRace.cpp;
+  horseRace.main();
   return 0;
 }
